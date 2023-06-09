@@ -3,6 +3,8 @@ import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+// import Register from "../../pages/register/Register";
+// import { Route, Redirect } from "react-router-dom";
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
@@ -31,6 +33,9 @@ export default function Topbar() {
           <Link to={`/profile/${user.username}`} style={{ textDecoration: "none" }}>
           <span className="topbarLink">Timeline</span>
         </Link>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <span className="topbarLink">Logout</span>
+          </Link>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
